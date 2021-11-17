@@ -1,20 +1,23 @@
 if __name__ == '__main__':
     n = int(input())
     arr = map(int, input().split())
-    
-    arr1=[i for i in arr]
-    arr1.sort(reverse=True) #descending order
-    newarr=[] # blank tmp array
-    
-    def chk_dup (tmparr,ele): # definning recurssive function to find duplicate and delete them
-        if tmparr.count(ele) >1:
-            tmparr.remove(ele)
-            chk_dup(tmparr,ele)
-        else:
-            return tmparr
-    
-    for ele in arr1:
-        newarr= chk_dup (arr1,ele)
+    #n= 5 # debug steps
+    #arr1= [-100,-100,-89,1,3,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,55,4,55,4,60,60,7,89,3] # debug steps
 
-    #print("newarr",newarr)
-    print(newarr[1])  # Printing the Second largest number
+#print(n)
+
+arr1=[i for i in arr]
+arr1.sort(reverse=True)
+#print("sorted original array",arr1) # debug steps
+
+newarr=arr1
+#print ('newarr initialized',newarr)# debug steps
+
+for ele in newarr: #iterates over each element in array
+    while newarr.count(ele) >1: # iterates over the each duplicate element till last
+        newarr.remove(ele)
+        #print("tmparr removed ele",ele,newarr) # debug steps
+    #print("newarr iteration ele" ,ele,newarr) # debug steps
+
+#print("newarr",newarr)
+print(newarr[1])
