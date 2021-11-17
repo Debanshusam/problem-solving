@@ -20,6 +20,8 @@ Constraints
 
 Print the list in lexicographic increasing order.'''
 
+Solution :
+
 
 if __name__ == '__main__':
     x = int(input())
