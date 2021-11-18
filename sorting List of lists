@@ -1,0 +1,41 @@
+if __name__ == '__main__':
+    records=[]
+    # commenting below code for eay input for testing
+    '''
+    for i in range(int(input("Enter student count"))):
+        name = input("Enter name")
+        score = float(input("Enter mark"))
+        records.append([name,score])
+    '''
+    records=[['Harry', 37.21], ['Berry', 37.21],['x',37.21], ['Tina', 37.2], ['Akriti', 41], ['Harsh', 39]]
+        
+    #print(records) # debug
+    tmp_score_store=[]
+    
+    for ele in records:
+        tmp_score_store.append(ele[1]) # extracted all the marks from records and stored here
+    tmp_score_store.sort() # sorted in decending order
+
+    for ele in tmp_score_store:
+        while tmp_score_store.count(ele) >1:
+            tmp_score_store.remove(ele) # the output will also be in increasing order sorted
+    
+    #second smallest score is second element
+    print ("Second lowest score is:",tmp_score_store[1]) # debug step
+
+    tmp_student=[]
+
+
+    for ele  in records:
+        if ele[1] == tmp_score_store[1]:
+            tmp_student.append(ele[0])
+    
+    #def func1(stu):
+	#    return(stu[0])
+    #tmp_student.sort(key=func1)
+
+    print ("unsorted",tmp_student)
+    tmp_student.sort (key=str) # this key parameter has critical role to play to sort the elements as strings
+    print ("sorted",tmp_student)
+    for x in tmp_student:
+        print(x)
