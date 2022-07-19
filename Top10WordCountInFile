@@ -1,0 +1,22 @@
+from collections import  Counter
+
+path_of_file="C:\\xxx\\xxx\\xxx\\xxx\\Testing_file.txt"
+word_list=[]
+
+#--- reading the file ---#
+with open (path_of_file, 'r') as fread:
+    reading=fread.readline()
+    #print(reading)
+    for ele in reading.split():
+        word_list.append(ele)
+        word_map[ele]=0
+
+counter_word=Counter(word_list) ## word count maintained here
+#print(word_map) # debug lines
+#------- Top 10 most used words with count ---#
+word_map_top_ten=counter_word.most_common(10)
+print(word_map_top_ten)
+
+#------- Least 10 most used words with count ---#
+word_map_Least_ten=counter_word.most_common()[:-10:-1]
+print(word_map_Least_ten)
