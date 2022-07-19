@@ -1,0 +1,10 @@
+## converting dict into a counter
+# This approach can be used to sort any dictionary by converting it into a counter object from Collections module
+
+from collections import Counter
+
+test_dict={'Lorem': 0, 'ipsum': 0, 'dolor': 0, 'sit': 0, 'amet,': 0, 'consectetur': 0, 'adipiscing': 0, 'elit,': 0, 'sed': 0, 'do': 0, 'eiusmod': 0, 'tempor': 0, 'incididunt': 0, 'ut': 0, 'labore': 0, 'et': 0, 'dolore': 0, 'magna': 0, 'aliqua.': 0, 'Quam': 0, 'quisque': 0, 'id': 0, 'diam': 0, 'vel': 0, 'quam': 0, 'elementum': 0, 'pulvinar': 0, 'etiam.': 0, 'Sed': 0, 'lectus': 0, 'vestibulum': 0, 'mattis': 0, 'ullamcorper': 0, 'velit.': 0, 'Turpis': 0, 'egestas': 0, 'integer': 0, 'eget': 0, 'aliquet': 0, 'nibh.': 0, 'Et': 0, 'sollicitudin': 0, 'ac': 0, 'orci': 0, 'phasellus': 0, 'tellus': 0, 'rutrum': 0, 'pellentesque.': 0, 'A': 0, 'erat': 0, 'nam': 0, 'at': 0, 'urna': 0, 'duis': 0, 'convallis.': 0, 'Amet': 0, 'purus': 0, 'gravida': 0, 'quis': 0, 'blandit': 0, 'turpis': 0, 'cursus': 0, 'in': 0, 'hac.': 0, 'Auctor': 0, 'augue': 0, 'mauris': 0, 'neque': 0, 'fermentum': 0, 'sollicitudin.': 0, 'Netus': 0, 'malesuada': 0, 'fames': 0, 'tempus.': 0, 'Parturient': 0, 'montes': 0, 'nascetur': 0, 'ridiculus': 0, 'mus': 0, 'vitae.': 0, 'Dignissim': 0, 'suspendisse': 0, 'est': 0, 'ante.': 0, 'Tortor': 0, 'posuere': 0, 'consequat.': 0, 'Cursus': 0, 'hac': 0, 'habitasse': 0, 'platea.': 0, 'Integer': 0, 'nunc': 0, 'risus': 0, 'commodo': 0, 'viverra.': 0, 'Ac': 0, 'maecenas': 0, 'pharetra': 0, 'Mi': 0, 'hendrerit': 0, 'lorem': 0, 'dolor.': 0, 'Cras': 0, 'odio': 0, 'eu': 0, 'feugiat': 0, 'pretium': 0, 'nibh': 0, 'consequat': 0, 'nisl.': 0, 'nulla': 0, 'facilisi': 0, 'nullam': 0, 'vehicula': 0, 'ipsum.': 0, 'Urna': 0, 'viverra': 0, 'justo': 0, 'nec': 0, 'ultrices': 0, 'dui': 0, 'sapien': 0, 'eget.': 0}
+test_dict=Counter(test_dict)
+# print(test_dict)
+top_10=test_dict.most_common(10)
+print(top_10)
